@@ -6,6 +6,10 @@ const HotelSchema = new mongoose.Schema({
         type: String,
         required: true
     },
+    name2:{
+        type: String,
+        required: true
+    },
     type:{
         type: String,
         required: true
@@ -14,35 +18,70 @@ const HotelSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    address:{
-        type: String,
-        required: true
-    },
-    distance:{
-        type: String,
-        required: true
-    },
-    photos:{
-        type: [String],
-    },
     title:{
         type: String,
         required: true
     },
-    desc:{
+    addr_num:{
         type: String,
         required: true
     },
-    rating:{
+    addr_street:{
+        type: String,
+        required: true
+    },
+    addr_lot:{
+        type: String,
+        required: true
+    },
+    grade:{
         type: Number,
         min:0,
         max:5
     },
-    rooms:{
-        type: [String]
+    titleImg:{
+        type: [String],
     },
-    cheapestPrice:{
+    max_people:{
         type: Number,
+        required: true,
+    },
+    bedroom:{
+        type: Number,
+        required: true,
+    },
+    bed:{
+        type: Number,
+        required: true,
+    },
+    bathroom:{
+        type: Number,
+        required: true,
+    },
+    facilities:{
+        type: [String],
+    },
+    rules:{
+        type: [String],
+    },
+    lng:{
+        type: Number,
+        required: true,
+    },
+    lat:{
+        type: Number,
+        required: true,
+    },
+    hostID:{
+        type: String,
+        required: true
+    },
+    hostName:{
+        type: String,
+        required: true
+    },
+    hostImg:{
+        type: String,
         required: true
     },
     featured:{

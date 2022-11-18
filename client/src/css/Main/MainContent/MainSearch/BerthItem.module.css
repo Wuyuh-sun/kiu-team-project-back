@@ -1,0 +1,108 @@
+.wrap{
+    width: auto;
+    height: 450px;
+    margin-bottom: 70px;
+    /* background-color:cornflowerblue; */
+    /* border: 1px solid black; */
+    box-sizing: border-box;
+}
+.wishBtn{
+    width: 30px;
+    height: 30px;
+    position: relative;
+    top: 45px;
+    left: 275px;
+    z-index: 99998;
+    /* border: 1px solid black; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.wishBtnItem1{
+    position: absolute;
+    z-index: 99998;
+    transition: 0.2s ease-in-out;
+}
+.wishBtnItem2{
+    position: absolute;
+    z-index: 99998;
+    transition: 0.2s ease-in-out;
+}
+.imgPath{
+    position: relative;
+    width: 100%;
+    height: 270px;
+    /* border: 1px solid rgb(170, 170, 170,0.5); */
+    border-radius: 30px;
+    overflow: scroll;
+    /* background: url(../../../../img/); */
+    display: flex;
+    flex-direction: row;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.5);
+}
+.imgPath::-webkit-scrollbar{
+    display: none;
+}
+.itemImg{
+    width: 100%;
+    height: 100%;
+    background-size:cover;
+    background-position: left center;
+    background-repeat: no-repeat;
+    position: relative;
+    flex: none;
+    z-index: 99999;
+    /* border-radius: 30px; */
+}
+.BerthInfoWrap{
+    width: 100%;
+    height: 150px;
+    /* border-bottom: 2px solid gray; */
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 20px;
+}
+.leftWrap{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.name1{
+    font-size: 15px;
+    color: #606060;
+    
+}
+.name2{
+    font-size: 25px;
+    width: 250px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.date{
+    font-size: 15px;
+    color: #606060;
+}
+.price{
+    font-size: 25px;
+    width: 250px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.starWrap{
+    display: flex;
+    justify-content: center;
+    margin-top: 6.5px;
+}
+.starWrap div:nth-child(1){
+    background-size:cover;
+    background-position: left center;
+    background-repeat: no-repeat;
+}
+.grade{
+    font-size: 25px;
+    line-height: 25px;
+}
+

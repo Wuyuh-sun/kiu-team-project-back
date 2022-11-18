@@ -1,0 +1,70 @@
+.img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0.6;    
+    background-size: cover;
+    background-position: -300px 0;
+}
+
+.wrap{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+    background-color: black
+}
+
+.text {
+    position: relative;
+    color: white;
+    font-size: 40px;
+    left: 5%;
+    top: 7%;
+}
+
+.btn {
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    /* opacity: 0.5; */
+    width: 120px;
+    height: 40px;
+    border-radius: 10px;
+    border: none;    
+    font-weight: bold;    
+    font-size: 15px;
+    top: 15%;
+    left: 5%;
+    position: relative;
+    text-align: center;
+}
+
+/* .btn:hover{
+    background-color: rgba(255, 255, 255, 0.3);
+} */
+
+.btn1 {
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    /* opacity: 0.5; */
+    width: 120px;
+    height: 40px;
+    border-radius: 10px;
+    border: none;    
+    font-weight: bold;    
+    font-size: 15px;
+    top: 18%;
+    left: 5%;
+    position: relative;
+    text-align: center;
+}
+
+.div {
+    top: 13%;
+    position: relative;
+}
+
+.div1 {
+    top: 14%;;
+    position: relative;
+}

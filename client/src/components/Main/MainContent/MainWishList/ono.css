@@ -1,0 +1,20 @@
+.sungminImg{
+    width: 100%;
+    height: 100%;
+    background: url(../../../../img/sungminHome.png);
+    background-size: cover;
+    border-radius: 15px;
+}
+
+.btn1 {
+    background: url(../../../../img/icon/heart.png);
+    background-size: 20px 20px;
+    background-position: 10px 10px;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    left: 92px;
+    top: 70px;
+    border: none;
+    background-repeat: no-repeat;
+}

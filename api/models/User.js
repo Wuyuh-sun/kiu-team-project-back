@@ -1,44 +1,36 @@
 import mongoose, { trusted } from 'mongoose';
 const UserSchema = new mongoose.Schema({
-    userid:{
+    username: {
         type: String,
         required: true,
-        unique:true
+        unique: true
     },
-    username:{
+    nickName: {
         type: String,
         required: true,
-        unique:true
+        unique: true
     },
-    email:{
+    password: {
         type: String,
         required: true,
-        unique:true
     },
-    password:{
-        type: String,
-        required: true
-    },
-    photo:{
-        type: String,
-        required: true
-    },
-    phonenumber:{
+    phoneNum: {
         type: String,
         required: true,
-        unique:true
     },
-    age:{
-        type: String,
-        required: true
+    age: {
+        type: Number,
+        required: true,
     },
-    isAdmin:{
+    photo: {
+        type: [String],
+    },
+    isAdmin: {
         type: Boolean,
         default: false,
     },
 },
-{timestamps:true}
-
+{ timestamps: true }
 );
 
 export default mongoose.model("User", UserSchema)

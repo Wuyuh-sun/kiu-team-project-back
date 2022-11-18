@@ -1,0 +1,119 @@
+.wrap{
+    width: 300px;
+    height: 550px;
+    /* border: 1px solid black; */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding : 30px 10px 20px 10px;
+    border-radius: 30px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+    margin : 0 auto;
+    z-index: 99999;
+    position: relative;
+    top: 0;
+    left: 0;
+    background-color: rgb(255,255,255);
+    /* transition: background-color 0.5s ease-in-out; */
+}
+
+.wrap h1{
+    margin-bottom: 30px;
+}
+
+.wrap input[type="email"]{
+    margin-bottom: 20px;
+    width: 240px;
+    height: 20px;
+    padding : 10px;
+    border-radius: 10px;
+    border: 1px solid rgb(177, 177, 177 );
+}
+.wrap input[type="password"]{
+    margin-bottom: 20px;
+    width: 240px;
+    height: 20px;
+    padding : 10px;
+    border-radius: 10px;
+    border: 1px solid rgb(177, 177, 177 );
+}
+
+.CheckboxWrap{
+    display : flex;
+    flex-direction: row;
+    width : 260px;
+    margin-bottom: 20px;
+}
+.CheckboxWrap input[type="checkbox"]{
+    margin-right: 10px;
+    /*transform : scale(1.5) ;*/
+    margin-left : 5px;
+}
+
+.wrap .button1{
+    width : 260px;
+    height : 40px;
+    padding : 10px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border : none;
+    background-color : rgb(94, 117, 230);
+    color : white;
+    font-weight: bold;
+}
+.wrap .button2{
+    width : 260px;
+    height : 40px;
+    padding : 10px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border : none;
+    background-color : rgb(96, 96, 96);
+    color : white;
+    font-weight: bold;
+}
+
+.wrap .findBtnGroup{
+    /* border: 1px solid black; */
+    width : 260px;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 30px;
+    border-top : 1px solid gray;
+}
+
+.findBtn1{
+    /* border: 1px solid black; */
+    background-color : rgb(220, 220, 220);
+    width : 120px;
+    height : 120px;
+    border-radius : 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: inset 0 0 3px rgba(0,0,0,0.16);
+}
+.findBtn2{
+    /* border: 1px solid black; */
+    background-color : rgb(220, 220, 220);
+    width : 120px;
+    height : 120px;
+    border-radius : 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: inset 0 0 3px rgba(0,0,0,0.16);
+}
+
+.email{
+    width : 43px;
+    margin-bottom: 5px;
+}
+
+.password{
+    width : 40px;
+    margin-bottom: 6px;
+}

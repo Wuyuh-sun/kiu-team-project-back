@@ -1,0 +1,21 @@
+
+
+.wish {
+    position: relative;
+    text-align: center;
+    top: 15px;
+}
+
+
+.list {
+    display: flex;
+    width: 90%;
+    height: 85%;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    position: relative;    
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 10%); 
+    padding-bottom : 20px;      
+}

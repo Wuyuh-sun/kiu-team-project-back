@@ -1,0 +1,17 @@
+.box {
+    width: 300px;
+    height: 700px;
+    border: 1px solid black;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 20%);
+    
+}
+
+.box:active {    
+    width: 300px;
+    height: 300px;    
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 20%);
+}

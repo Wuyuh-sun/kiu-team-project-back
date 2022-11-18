@@ -1,0 +1,7 @@
+.map{
+    width: 100%;
+    height: calc(100%);
+    position: fixed;
+    top: 0;
+    left: 0;
+}

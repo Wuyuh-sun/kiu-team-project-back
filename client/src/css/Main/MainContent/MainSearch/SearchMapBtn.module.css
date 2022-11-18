@@ -1,0 +1,25 @@
+.wrap {
+    position: fixed;
+    width: 100px;
+    height: 50px;
+    bottom: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #000;
+    border-radius: 30px;
+    z-index: 99998;
+    color: #FFF;
+    padding: 18px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #1C1C1C;
+    box-shadow: 0 3px 5px rgba(0,0,0,0.16);
+    transition: 0.5s ease-in-out;
+}
+.wrap svg{
+    fill: white;
+    width: 25px;
+    height: 25px;
+}

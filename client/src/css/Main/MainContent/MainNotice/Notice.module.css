@@ -1,0 +1,35 @@
+.title {
+    position: relative;
+    text-align: center;
+    top: 15px;
+}
+
+.delete {
+    position: relative;
+    top: 40px;
+    left: 70%;
+    background-color: white;
+    border: none;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16);
+    width: 90px;
+    border-radius: 10px;
+}
+
+.wrap {
+    height: 100%;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: 80%;
+    position: relative;    
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);        
+}
+
+.div {
+    height: 100%;
+}

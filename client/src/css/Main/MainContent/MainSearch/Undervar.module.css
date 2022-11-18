@@ -1,0 +1,31 @@
+.footerWrap {
+    width: 100%;
+    height: 80px;
+    background-color: white;
+    box-sizing: border-box;
+    border-top: 1px solid rgba(0, 0, 0, 0.3);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    position: absolute;
+    z-index: 99999;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    padding: 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+.payText div:last-child{
+    font-size: 12px;
+    text-decoration: underline;
+    margin-top: 5px;
+}
+.payBtn{
+    width: 120px;
+    height: 50px;
+    border-radius: 15px;
+    background-color: #5e75e6;
+    color: white;
+    text-align: center;
+    line-height: 50px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+}
