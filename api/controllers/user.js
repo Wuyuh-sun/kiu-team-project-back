@@ -25,11 +25,25 @@ export const deleteUser = async (req, res, next)=>{
 }
 
 export const getUser = async (req, res, next)=>{
+    // console.log(req.params.id)
     try {
-        const User = await User.findById(
+        const Userr = await User.findById(
             req.params.id
         );
-        res.status(200).json(User)
+        res.status(200).json(Userr)
+    } catch (err) {
+        next(err)
+    }
+}
+
+/** 현재 로그인중인 유저의 정보 응답 */
+export const userInfo = async (req, res, next)=>{
+    // console.log(req.user.id);
+    try {
+        const Userr = await User.findById(
+            req.user.id
+        );
+        res.status(200).json({email:Userr.username, nickname:Userr.nickName, photo:Userr.photo})
     } catch (err) {
         next(err)
     }
