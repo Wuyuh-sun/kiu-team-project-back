@@ -57,3 +57,37 @@ export const getUsers = async (req, res, next)=>{
         next(err)
     }
 }
+
+// 변경
+export const wishHotel = async (req, res, next) => {
+    try {
+      await User.findByIdAndUpdate(req.user.id, {
+        $push: { wishList: req.params.id },
+      });
+      await User.findByIdAndUpdate(req.params.id, {
+        $inc: { wishListNum: 1 },
+      });
+      res.status(200).json("Wishlist successfull.")
+    } catch (err) {
+      next(err);
+    }
+  };
+  
+// 변경
+  export const unwishHotel = async (req, res, next) => {
+    try {
+      try {
+        await User.findByIdAndUpdate(req.user.id, {
+          $pull: { wishList: req.params.id },
+        });
+        await User.findByIdAndUpdate(req.params.id, {
+          $inc: { wishListNum: -1 },
+        });
+        res.status(200).json("unwishlist successfull.")
+      } catch (err) {
+        next(err);
+      }
+    } catch (err) {
+      next(err);
+    }
+  };

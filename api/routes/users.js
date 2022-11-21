@@ -1,5 +1,5 @@
 import express from "express";
-import {updateUser, deleteUser, getUser, getUsers, userInfo} from "../controllers/user.js";
+import { deleteUser, getUser, getUsers, unwishHotel, updateUser, userInfo, wishHotel} from "../controllers/user.js";
 import { verifyAdmin, verifyToken, verifyUser } from "../utils/verifyToken.js";
 
 const router = express.Router();
@@ -24,7 +24,13 @@ router.delete("/:id", verifyUser, deleteUser);
 router.get("/:id", verifyUser, getUser);
 
 router.post("/userinfo", verifyToken, userInfo);
+
 //GET ALL
 router.get("/", verifyAdmin, getUsers);
+
+//변경
+router.put("/wishHotel/:id", verifyToken, wishHotel);
+//변경
+router.put("/unwishHotel/:id", verifyToken, unwishHotel);
 
 export default router
