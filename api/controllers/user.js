@@ -43,7 +43,7 @@ export const userInfo = async (req, res, next)=>{
         const Userr = await User.findById(
             req.user.id
         );
-        res.status(200).json({email:Userr.username, nickname:Userr.nickName, photo:Userr.photo})
+        res.status(200).json({email:Userr.username, nickname:Userr.nickName, photo:Userr.photo, wishList:Userr.wishList})
     } catch (err) {
         next(err)
     }
