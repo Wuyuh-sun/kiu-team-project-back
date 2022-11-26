@@ -88,6 +88,9 @@ const HotelSchema = new mongoose.Schema({
         type: Boolean,
         default: false,
     },
+    reservation: {
+        type: [String],
+    },
 
 });
 
