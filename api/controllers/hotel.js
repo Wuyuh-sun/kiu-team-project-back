@@ -51,6 +51,7 @@ export const getHotels = async (req, res, next) => {
         ...others,
         cheapestPrice: { $gt: min | 1, $lt: max || 999 },
       }).limit(req.query.limit);
+      console.log(min)
       res.status(200).json(hotels);
     } catch (err) {
       next(err);
@@ -109,7 +110,7 @@ export const wish = async (req, res, next) => {
   
       const list = await Promise.all(
         wishlistHorel.map(async (HotelId) => {
-          console.log(HotelId);
+        //   console.log(HotelId);
           return await Hotel.find({ _id: HotelId });
     
         })
