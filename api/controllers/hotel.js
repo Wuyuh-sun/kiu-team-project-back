@@ -1,4 +1,5 @@
 import Hotel from "../models/Hotel.js";
+import Reservation from "../models/Reservation.js";
 import Room from "../models/Room.js";
 import User from "../models/User.js";
 
@@ -120,3 +121,18 @@ export const wish = async (req, res, next) => {
       next(err);
     }
   };
+
+
+export const getHotelReservation = async (req, res, next) => {
+    try {
+      const hotel = await Hotel.findById(req.params.id);
+      const list = await Promise.all(
+        hotel.reservation.map((reservation) => {
+          return Reservation.findById(reservation);
+        })
+      );
+      res.status(200).json(list)
+    } catch (err) {
+      next(err);
+    }
+  };  

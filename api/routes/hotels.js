@@ -1,5 +1,5 @@
 import express from "express";
-import { countByCity, countByType, createHotel, deleteHotel, getHotel, getHotels, updateHotel, wish } from "../controllers/hotel.js";
+import { countByCity, countByType, createHotel, deleteHotel, getHotel, getHotelReservation, getHotels, updateHotel, wish } from "../controllers/hotel.js";
 import Hotel from "../models/Hotel.js";
 import { verifyAdmin, verifyToken } from "../utils/verifyToken.js";
 
@@ -17,6 +17,9 @@ router.get("/find/:id", getHotel);
 router.get("/", getHotels);
 router.get("/countByCity", countByCity);
 router.get("/countByType", countByType);
+
+// 호텔 안에 예약하기 검색
+router.get("/reservation/:id", getHotelReservation);
 
 // 변경
 router.get("/wish",verifyToken, wish);
