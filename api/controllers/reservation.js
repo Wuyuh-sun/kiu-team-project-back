@@ -4,7 +4,8 @@ import { createError } from "../utils/error.js";
 
 export const createReservation = async (req, res, next) => {
   const hotelId = req.params.hotelid;
-  const newReservation = new Reservation(req.body);
+  console.log(req.body)
+  const newReservation = new Reservation({ ...req.body, userId: req.user.id, hotelId: hotelId });
   // try {
   //   await User.findByIdAndUpdate(req.user.id, {
   //     $push: { wishList: req.params.id },
@@ -16,13 +17,13 @@ export const createReservation = async (req, res, next) => {
   //----------------------------------------------------------------
   try {
     const savedReservation = await newReservation.save();
-    try {
-      await Hotel.findByIdAndUpdate(hotelId, {
-        $push: { reservation: savedReservation._id },
-      });
-    } catch (err) {
-      next(err);
-    }
+    // try {
+    //   await Hotel.findByIdAndUpdate(hotelId, {
+    //     $push: { reservation: savedReservation._id },
+    //   });
+    // } catch (err) {
+    //   next(err);
+    // }
     res.status(200).json(savedReservation);
   } catch (err) {
     next(err);
@@ -41,22 +42,22 @@ export const updateReservation = async (req, res, next) => {
     next(err);
   }
 };
+
 export const updateReservationAvailability = async (req, res, next) => {
   try {
-    console.log(req.body.dates)
-    await Reservation.updateOne(
-      { "roomNumbers._id": req.params.id },
-      {
-        $push: {
-          "rooomNumbers.$.unavailableDates": req.body.dates
-        },
-      }
-    );
+    console.log("params : " + req.params.id)
+    console.log("bodyData : " + req.body.unavailableDates);
+    console.log("user : " + req.user.id)
+
+    await Reservation.findByIdAndUpdate(req.params.id, {
+      $set: { date: req.body.unavailableDates },
+    });
     res.status(200).json("Reservation status has been updated.");
   } catch (err) {
     next(err);
   }
 };
+
 export const deleteReservation = async (req, res, next) => {
   const hotelId = req.params.hotelid;
   try {
@@ -83,7 +84,13 @@ export const getReservation = async (req, res, next) => {
 };
 export const getReservations = async (req, res, next) => {
   try {
-    const reservation = await Reservation.find();
+    // console.log(req.user.id)
+    const reservation = await Reservation.find({
+      userId : req.user.id
+    }).sort( { "_id": -1 } );
+    // reservation.map((item,i)=>{
+    //   console.log(item.hotelId);
+    // })
     res.status(200).json(reservation);
   } catch (err) {
     next(err);

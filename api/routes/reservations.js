@@ -17,7 +17,7 @@ router.delete("/:id/:hotelid", verifyToken, deleteReservation);
 //GET
 router.get("/:id", verifyToken, getReservation);
 
-//GET ALL
+//GET ALL (로그인 한 유저의 모든 예약 리스트)
 router.get("/",verifyToken, getReservations);
 
 export default router
