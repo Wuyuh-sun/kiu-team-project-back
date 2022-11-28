@@ -23,15 +23,13 @@ const ReservationSchema = new mongoose.Schema(
       type: Boolean,
       default: true,
     },
-    date: {
-      startDate: {
-        type: Date,
-        // unique: true,
-      },
-      endDate: {
-        type: Date,
-        // unique: true,
-      },
+    startDate: {
+      type: Date,
+      // unique: true,
+    },
+    endDate: {
+      type: Date,
+      // unique: true,
     },
     // date: [
     //     {
